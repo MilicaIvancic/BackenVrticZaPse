@@ -1,0 +1,14 @@
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\bin\Debug\netcoreapp2.2\Aplication.deps.json
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\bin\Debug\netcoreapp2.2\Aplication.dll
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\bin\Debug\netcoreapp2.2\Aplication.pdb
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\obj\Debug\netcoreapp2.2\Aplication.csproj.CoreCompileInputs.cache
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\obj\Debug\netcoreapp2.2\Aplication.AssemblyInfoInputs.cache
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\obj\Debug\netcoreapp2.2\Aplication.AssemblyInfo.cs
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\obj\Debug\netcoreapp2.2\Aplication.dll
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\obj\Debug\netcoreapp2.2\Aplication.pdb
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\obj\Debug\netcoreapp2.2\Aplication.csprojAssemblyReference.cache
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\bin\Debug\netcoreapp2.2\Aplication.runtimeconfig.json
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\bin\Debug\netcoreapp2.2\Aplication.runtimeconfig.dev.json
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\Milica\source\repos\VrticZaPse\Aplication\obj\Debug\netcoreapp2.2\Aplication.csproj.CopyComplete

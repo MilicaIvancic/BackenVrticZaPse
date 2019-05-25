@@ -1,0 +1,16 @@
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\bin\Debug\netcoreapp2.2\EfComands.deps.json
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\bin\Debug\netcoreapp2.2\EfComands.dll
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\bin\Debug\netcoreapp2.2\EfComands.pdb
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\obj\Debug\netcoreapp2.2\EfComands.csprojAssemblyReference.cache
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\obj\Debug\netcoreapp2.2\EfComands.csproj.CoreCompileInputs.cache
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\obj\Debug\netcoreapp2.2\EfComands.AssemblyInfoInputs.cache
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\obj\Debug\netcoreapp2.2\EfComands.AssemblyInfo.cs
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\obj\Debug\netcoreapp2.2\EfComands.dll
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\obj\Debug\netcoreapp2.2\EfComands.pdb
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\bin\Debug\netcoreapp2.2\Aplication.dll
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\bin\Debug\netcoreapp2.2\EfDataAccess.dll
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\bin\Debug\netcoreapp2.2\Aplication.pdb
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\bin\Debug\netcoreapp2.2\EfDataAccess.pdb
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\Milica\source\repos\VrticZaPse\EfComands\obj\Debug\netcoreapp2.2\EfComands.csproj.CopyComplete
