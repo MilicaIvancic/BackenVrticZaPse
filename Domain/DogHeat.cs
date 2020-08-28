@@ -9,5 +9,6 @@ namespace Domain
         public int DogId { get; set; }
         public Dog Dog { get; set; }
         public DateTime? EndDate { get; set; }
+        public DateTime StartAt { get; set; }
     }
 }

@@ -2,8 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace EfDataAccess.Configuration
 {
@@ -16,6 +14,8 @@ namespace EfDataAccess.Configuration
             builder.Property(p => p.Accepted).HasDefaultValue(0);
             builder.Property(p => p.DogDescription).HasMaxLength(300).IsRequired();
             builder.Property(p => p.Chip).HasMaxLength(300).IsRequired();
+            builder.Property(p => p.Img).IsRequired();
+            builder.Property(p => p.Alt).IsRequired();
             builder.Property(e => e.DogSex)
             .HasConversion(x => x.ToString(), 
                 x => (Sex)Enum.Parse(typeof(Sex), x)).IsRequired();
@@ -25,8 +25,9 @@ namespace EfDataAccess.Configuration
 
             builder.HasMany(p => p.HealthCards).WithOne(h => h.Dog);
             builder.HasMany(p => p.Toys).WithOne(t => t.Dog);
-            builder.HasMany(p => p.ChronicDiseases).WithOne(t => t.Dog);
+        
             builder.HasMany(p => p.DogHeats).WithOne(t => t.Dog);
+            builder.HasOne(d => d.User).WithMany(u => u.Dogs).HasForeignKey(d => d.UserId);
 
             builder.HasMany(p => p.DogEducators)
                 .WithOne(pe => pe.Dog)
@@ -42,8 +43,10 @@ namespace EfDataAccess.Configuration
              .WithOne(pm => pm.Dog)
              .HasForeignKey(pm => pm.DogId)
              .OnDelete(DeleteBehavior.Restrict);
-
-
+            builder.HasMany(p => p.DogChronichDiseases)
+                .WithOne(pe => pe.Dog)
+                .HasForeignKey(pe => pe.DogId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

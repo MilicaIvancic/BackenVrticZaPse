@@ -13,7 +13,7 @@ namespace EfDataAccess.Configuration
         {
             builder.Property(p => p.IsActive).HasDefaultValue(0).IsRequired();
             builder.HasKey(pc => new { pc.DogId, pc.EducatorId });
-            builder.HasMany(p => p.EducetorReports).WithOne(h => h.DogEducator);
+            builder.HasOne(d => d.Employe).WithMany(e => e.EducatorDogs).HasForeignKey(d => d.EducatorId);
             builder.Property(u => u.StartDate).HasDefaultValueSql("GETDATE()");
         }
     }

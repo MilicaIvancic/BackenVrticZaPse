@@ -13,6 +13,7 @@ namespace EfDataAccess.Configuration
         {
             builder.HasOne(p => p.HealthCard).WithMany(u => u.HelthCardVaccines);
             builder.HasOne(p => p.Vaccine).WithMany(u => u.VaccineHealthCards);
+            builder.Property(p => p.RecivedAt).IsRequired();
         }
     }
 }

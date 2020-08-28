@@ -12,6 +12,7 @@ namespace EfDataAccess.Configuration
         public void Configure(EntityTypeBuilder<DogHeat> builder)
         {
             builder.HasOne(p => p.Dog).WithMany(u => u.DogHeats);
+            builder.Property(p => p.StartAt).IsRequired();
         }
     }
 }

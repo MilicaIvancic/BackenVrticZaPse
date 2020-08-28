@@ -4,6 +4,8 @@ using System.Text;
 
 namespace Domain
 {
+
+   
     public class MedicineMedicalReport
     {
         public DateTime StartDate { get; set; }

@@ -9,7 +9,7 @@ namespace Aplication.Interfaces
 
     public interface ICommand<TRequest>
     {
-        void Execute(TRequest request, Func<BaseEntity, BaseDto, bool> model = null);
+        void Execute(TRequest request);//, Func<BaseEntity, BaseDto, bool> model = null);
     }
 
     public interface ICommand<TRequest, TResult>

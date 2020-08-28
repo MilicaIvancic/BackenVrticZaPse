@@ -13,6 +13,8 @@ namespace Domain
         public int UserId { get; set; }
         public User User { get; set; }
         public ICollection<EmployeCertificate> EmployeCertificates { get; set; }
+        public ICollection<DogEducator> EducatorDogs { get; set; }
+        
     }
 
 }

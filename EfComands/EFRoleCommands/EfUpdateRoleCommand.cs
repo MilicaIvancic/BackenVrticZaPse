@@ -1,13 +1,8 @@
 ﻿using Aplication.Comands.Roles;
 using Aplication.DTO;
 using Aplication.Exceptions;
-using Aplication.Interfaces;
-using Domain;
 using EfDataAccess;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace EfComands.EFRoleCommands
 {
@@ -17,25 +12,30 @@ namespace EfComands.EFRoleCommands
         {
         }
 
-        public void Execute(RoleDto request, Func<BaseEntity, BaseDto, bool> model = null)
+        public void Execute(RoleDto request)
         {
             var role = Context.Roles.Find(request.Id);
 
-           // ideja napraviti metod koji ce sam odraditi svaki update ali 
+         
             if (role == null)   throw new EntitynotFoundException();
-            if(model != null && model(role, request) == false)
-            {
-                 throw new EntityAlreadyDeleted();
-            }
             
-            
-           if (role.RoleName != request.RoleName && request.RoleName!=null)
-            {
-               if (Context.Roles.Any(q => q.RoleName == request.RoleName)) throw new EntityAlreadyExistsException();
+            if(role.IsDeleted)
+                throw new EntityAlreadyDeleted();
 
-               role.RoleName = request.RoleName;
+            if (request.RoleName!=null)
+            {
+                if (Context.Roles.Any(q => q.RoleName == request.RoleName))
+                { 
+
+                    if (request.Id!=role.Id) throw new EntityAlreadyExistsException();
+
+                    // proveriti kod luke
+                    // ne dozvoljava da promenim samo npr aktivan posto kao pamti ime i njega menja
+                    //na isto a posto ime vec postoji ne moze da ga promeni na isto i onda baca exception.
+                }
+                role.RoleName = request.RoleName;
            }
-           // zbog diff algoritma ne pitam da li su jednaki 
+          
            if(request.IsActive != null)
                 role.IsActive = request.IsActive.Value;
 

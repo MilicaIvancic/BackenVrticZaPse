@@ -3,10 +3,7 @@ using Aplication.DTO;
 using Aplication.Exceptions;
 using Domain;
 using EfDataAccess;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace EfComands.EFRoleCommands
 {
@@ -16,14 +13,14 @@ namespace EfComands.EFRoleCommands
         {
         }
 
-        public void Execute(RoleDto request, Func<BaseEntity, BaseDto, bool> model = null)
+        public void Execute(RoleDto request)//, Func<BaseEntity, BaseDto, bool> model = null)
         {
             if (Context.Roles.Any(c => c.RoleName == request.RoleName))
             {
                 throw new EntityAlreadyExistsException();
             }
 
-            Context.Roles.Add(new Domain.Role
+            Context.Roles.Add(new Role
             {
                 RoleName = request.RoleName
             });

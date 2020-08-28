@@ -6,7 +6,7 @@ namespace Domain
 {
     public class Phone:BaseEntity
     {
-        public int PhoneNumer { get; set; }
+        public string PhoneNumer { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
     }

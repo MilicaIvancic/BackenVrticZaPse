@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\API\\API.csproj": {}
+    "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\API\\API.csproj": {
+    "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\API\\API.csproj",
+        "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\API\\API.csproj",
         "packagesPath": "C:\\Users\\Milica\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\API\\obj\\",
+        "outputPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -30,14 +30,14 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Aplication\\Aplication.csproj": {
-                "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Aplication\\Aplication.csproj"
+              "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Aplication\\Aplication.csproj": {
+                "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Aplication\\Aplication.csproj"
               },
-              "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfComands\\EfComands.csproj": {
-                "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfComands\\EfComands.csproj"
+              "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfComands\\EfComands.csproj": {
+                "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfComands\\EfComands.csproj"
               },
-              "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj": {
-                "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj"
+              "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj": {
+                "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj"
               }
             }
           }
@@ -57,6 +57,10 @@
               "version": "[2.2.0, )",
               "autoReferenced": true
             },
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
               "target": "Package",
@@ -74,21 +78,27 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Aplication\\Aplication.csproj": {
+    "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Aplication\\Aplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Aplication\\Aplication.csproj",
+        "projectUniqueName": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Aplication\\Aplication.csproj",
         "projectName": "Aplication",
-        "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Aplication\\Aplication.csproj",
+        "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Aplication\\Aplication.csproj",
         "packagesPath": "C:\\Users\\Milica\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Aplication\\obj\\",
+        "outputPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Aplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -107,8 +117,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Domain\\Domain.csproj"
+              "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\Domain.csproj"
               }
             }
           }
@@ -148,21 +158,27 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Domain\\Domain.csproj": {
+    "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Milica\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -200,21 +216,27 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfComands\\EfComands.csproj": {
+    "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfComands\\EfComands.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfComands\\EfComands.csproj",
+        "projectUniqueName": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfComands\\EfComands.csproj",
         "projectName": "EfComands",
-        "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfComands\\EfComands.csproj",
+        "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfComands\\EfComands.csproj",
         "packagesPath": "C:\\Users\\Milica\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfComands\\obj\\",
+        "outputPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfComands\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -233,11 +255,14 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Aplication\\Aplication.csproj": {
-                "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Aplication\\Aplication.csproj"
+              "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Aplication\\Aplication.csproj": {
+                "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Aplication\\Aplication.csproj"
               },
-              "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj": {
-                "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj"
+              "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\Domain.csproj"
+              },
+              "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj": {
+                "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj"
               }
             }
           }
@@ -259,21 +284,27 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj": {
+    "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj",
         "projectName": "EfDataAccess",
-        "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj",
+        "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfDataAccess\\EfDataAccess.csproj",
         "packagesPath": "C:\\Users\\Milica\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\EfDataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\EfDataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -292,8 +323,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\Milica\\source\\repos\\VrticZaPse\\Domain\\Domain.csproj"
+              "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Milica\\Desktop\\nekiProjektiBitniFax\\diplomski\\c#\\VrticZaPse\\Domain\\Domain.csproj"
               }
             }
           }
@@ -333,10 +364,16 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
-          "warn": true
+          "warn": true,
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

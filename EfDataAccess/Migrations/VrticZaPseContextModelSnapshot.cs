@@ -88,8 +88,6 @@ namespace EfDataAccess.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<int>("DogId");
-
                     b.Property<bool>("IsActive");
 
                     b.Property<bool>("IsDeleted");
@@ -100,13 +98,7 @@ namespace EfDataAccess.Migrations
                         .IsRequired()
                         .HasMaxLength(50);
 
-                    b.Property<string>("Therapy")
-                        .IsRequired()
-                        .HasMaxLength(50);
-
                     b.HasKey("Id");
-
-                    b.HasIndex("DogId");
 
                     b.ToTable("ChronicDiseases");
                 });
@@ -123,7 +115,9 @@ namespace EfDataAccess.Migrations
 
                     b.Property<DateTime>("CreatedAt");
 
-                    b.Property<bool>("IsActive");
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValue(true);
 
                     b.Property<bool>("IsDeleted");
 
@@ -153,6 +147,9 @@ namespace EfDataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasDefaultValue(false);
 
+                    b.Property<string>("Alt")
+                        .IsRequired();
+
                     b.Property<DateTime>("BirthDate");
 
                     b.Property<bool>("Castration");
@@ -170,6 +167,9 @@ namespace EfDataAccess.Migrations
                         .HasMaxLength(300);
 
                     b.Property<string>("DogSex")
+                        .IsRequired();
+
+                    b.Property<string>("Img")
                         .IsRequired();
 
                     b.Property<bool>("IsActive");
@@ -195,11 +195,34 @@ namespace EfDataAccess.Migrations
                     b.ToTable("Dogs");
                 });
 
+            modelBuilder.Entity("Domain.DogChronichDisease", b =>
+                {
+                    b.Property<int>("DogId");
+
+                    b.Property<int>("ChronicDiseaseId");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasDefaultValueSql("GETDATE()");
+
+                    b.Property<string>("Therapy")
+                        .IsRequired()
+                        .HasMaxLength(100);
+
+                    b.HasKey("DogId", "ChronicDiseaseId");
+
+                    b.HasIndex("ChronicDiseaseId");
+
+                    b.ToTable("DogChronichDiseases");
+                });
+
             modelBuilder.Entity("Domain.DogEducator", b =>
                 {
                     b.Property<int>("DogId");
 
                     b.Property<int>("EducatorId");
+
+                    b.Property<int?>("EmployeId");
 
                     b.Property<DateTime?>("ExpireDate");
 
@@ -213,9 +236,13 @@ namespace EfDataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasDefaultValueSql("GETDATE()");
 
+                    b.Property<int?>("UserId");
+
                     b.HasKey("DogId", "EducatorId");
 
-                    b.HasIndex("EducatorId");
+                    b.HasIndex("EmployeId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("DogEducator");
                 });
@@ -237,6 +264,8 @@ namespace EfDataAccess.Migrations
                     b.Property<bool>("IsDeleted");
 
                     b.Property<DateTime?>("ModifiedAt");
+
+                    b.Property<DateTime>("StartAt");
 
                     b.HasKey("Id");
 
@@ -272,7 +301,7 @@ namespace EfDataAccess.Migrations
                     b.ToTable("DogServices");
                 });
 
-            modelBuilder.Entity("Domain.EducetorReport", b =>
+            modelBuilder.Entity("Domain.EducatorReport", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -286,7 +315,11 @@ namespace EfDataAccess.Migrations
 
                     b.Property<int?>("DogEducatorDogId");
 
+                    b.Property<int?>("DogEducatorDogId1");
+
                     b.Property<int?>("DogEducatorEducatorId");
+
+                    b.Property<int?>("DogEducatorEducatorId1");
 
                     b.Property<int>("DogEducatorId");
 
@@ -304,7 +337,9 @@ namespace EfDataAccess.Migrations
 
                     b.HasIndex("DogEducatorDogId", "DogEducatorEducatorId");
 
-                    b.ToTable("EducetorReport");
+                    b.HasIndex("DogEducatorDogId1", "DogEducatorEducatorId1");
+
+                    b.ToTable("EducatorReports");
                 });
 
             modelBuilder.Entity("Domain.Employe", b =>
@@ -325,7 +360,7 @@ namespace EfDataAccess.Migrations
 
                     b.Property<string>("Image")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasMaxLength(250);
 
                     b.Property<bool>("IsActive");
 
@@ -333,7 +368,7 @@ namespace EfDataAccess.Migrations
 
                     b.Property<string>("LastFinishedEducation")
                         .IsRequired()
-                        .HasMaxLength(50);
+                        .HasMaxLength(110);
 
                     b.Property<DateTime?>("ModifiedAt");
 
@@ -401,6 +436,8 @@ namespace EfDataAccess.Migrations
                     b.Property<bool>("IsDeleted");
 
                     b.Property<DateTime?>("ModifiedAt");
+
+                    b.Property<DateTime>("RecivedAt");
 
                     b.Property<int>("VaccineId");
 
@@ -573,12 +610,16 @@ namespace EfDataAccess.Migrations
 
                     b.Property<DateTime?>("ModifiedAt");
 
-                    b.Property<int>("PhoneNumer")
+                    b.Property<string>("PhoneNumer")
+                        .IsRequired()
                         .HasMaxLength(15);
 
                     b.Property<int>("UserId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PhoneNumer")
+                        .IsUnique();
 
                     b.HasIndex("UserId");
 
@@ -748,6 +789,10 @@ namespace EfDataAccess.Migrations
 
                     b.Property<DateTime?>("ModifiedAt");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasMaxLength(50);
+
                     b.Property<int>("RoleId");
 
                     b.Property<string>("Surname")
@@ -806,14 +851,6 @@ namespace EfDataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Domain.ChronicDisease", b =>
-                {
-                    b.HasOne("Domain.Dog", "Dog")
-                        .WithMany("ChronicDiseases")
-                        .HasForeignKey("DogId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
             modelBuilder.Entity("Domain.Dog", b =>
                 {
                     b.HasOne("Domain.Race", "Race")
@@ -827,6 +864,19 @@ namespace EfDataAccess.Migrations
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
+            modelBuilder.Entity("Domain.DogChronichDisease", b =>
+                {
+                    b.HasOne("Domain.ChronicDisease", "ChronicDisease")
+                        .WithMany("ChronichDiseaseDogs")
+                        .HasForeignKey("ChronicDiseaseId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("Domain.Dog", "Dog")
+                        .WithMany("DogChronichDiseases")
+                        .HasForeignKey("DogId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
             modelBuilder.Entity("Domain.DogEducator", b =>
                 {
                     b.HasOne("Domain.Dog", "Dog")
@@ -834,10 +884,13 @@ namespace EfDataAccess.Migrations
                         .HasForeignKey("DogId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("Domain.User", "User")
+                    b.HasOne("Domain.Employe", "Employe")
                         .WithMany("EducatorDogs")
-                        .HasForeignKey("EducatorId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("EmployeId");
+
+                    b.HasOne("Domain.User")
+                        .WithMany("EducatorDogs")
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Domain.DogHeat", b =>
@@ -861,11 +914,15 @@ namespace EfDataAccess.Migrations
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("Domain.EducetorReport", b =>
+            modelBuilder.Entity("Domain.EducatorReport", b =>
                 {
                     b.HasOne("Domain.DogEducator", "DogEducator")
-                        .WithMany("EducetorReports")
+                        .WithMany("EducatorReports")
                         .HasForeignKey("DogEducatorDogId", "DogEducatorEducatorId");
+
+                    b.HasOne("Domain.DogEducator")
+                        .WithMany("DogEducatorReports")
+                        .HasForeignKey("DogEducatorDogId1", "DogEducatorEducatorId1");
                 });
 
             modelBuilder.Entity("Domain.Employe", b =>

@@ -17,6 +17,20 @@
     <Compile Remove="Migrations\20190522204022_All.Designer.cs" />
     <Compile Remove="Migrations\20190522204336_All.cs" />
     <Compile Remove="Migrations\20190522204336_All.Designer.cs" />
+    <Compile Remove="Migrations\20190610165858_phone numer.cs" />
+    <Compile Remove="Migrations\20190610165858_phone numer.Designer.cs" />
+    <Compile Remove="Migrations\20190610180809_phone number rename.cs" />
+    <Compile Remove="Migrations\20190610180809_phone number rename.Designer.cs" />
+    <Compile Remove="Migrations\20190921235110_educatorReportnew.cs" />
+    <Compile Remove="Migrations\20190921235110_educatorReportnew.Designer.cs" />
+    <Compile Remove="Migrations\20190921235637_educatorReportdeleted.cs" />
+    <Compile Remove="Migrations\20190921235637_educatorReportdeleted.Designer.cs" />
+    <Compile Remove="Migrations\20190921235945_spasibazu.cs" />
+    <Compile Remove="Migrations\20190921235945_spasibazu.Designer.cs" />
+    <Compile Remove="Migrations\20190922002341_neeee.cs" />
+    <Compile Remove="Migrations\20190922002341_neeee.Designer.cs" />
+    <Compile Remove="Migrations\20190922002629_save this project.cs" />
+    <Compile Remove="Migrations\20190922002629_save this project.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +45,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore">
+      <HintPath>..\..\..\..\..\..\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.aspnetcore.identity.entityframeworkcore\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

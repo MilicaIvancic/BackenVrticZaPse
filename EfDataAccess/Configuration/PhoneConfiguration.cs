@@ -11,7 +11,8 @@ namespace EfDataAccess.Configuration
     {
         public void Configure(EntityTypeBuilder<Phone> builder)
         {
-            builder.Property(p => p.PhoneNumer).HasMaxLength(15);
+            builder.Property(p => p.PhoneNumer).HasMaxLength(15).IsRequired();
+            builder.HasIndex(p => p.PhoneNumer).IsUnique();
             builder.HasOne(p => p.User).WithMany(p => p.Phones);
         }
     }

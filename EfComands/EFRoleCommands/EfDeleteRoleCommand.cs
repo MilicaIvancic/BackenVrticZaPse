@@ -15,13 +15,15 @@ namespace EfComands.EFRoleCommands
         {
         }
 
-        public void Execute(int request, Func<BaseEntity, BaseDto, bool> model = null)
+        public void Execute(int request)//, Func<BaseEntity, BaseDto, bool> model = null)
         {
             var role = Context.Roles.Find(request);
+            if (role == null)
+            {
+                throw new EntitynotFoundException();
+            }
 
-            if (role.IsDeleted == true) throw new EntityAlreadyDeleted();
-
-            if (role.IsActive == true)
+            if (role.IsActive)
             {
                 role.IsActive = false;
             }

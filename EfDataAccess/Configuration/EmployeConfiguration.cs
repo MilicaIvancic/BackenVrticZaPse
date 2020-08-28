@@ -12,9 +12,10 @@ namespace EfDataAccess.Configuration
         public void Configure(EntityTypeBuilder<Employe> builder)
         {
             builder.Property(p => p.Description).HasMaxLength(300).IsRequired();
-            builder.Property(p => p.Image).HasMaxLength(50).IsRequired();
+            builder.Property(p => p.Image).HasMaxLength(250).IsRequired();
             builder.Property(p => p.Alt).HasMaxLength(50).IsRequired();
-            builder.Property(p => p.LastFinishedEducation).HasMaxLength(50).IsRequired();
+            builder.Property(p => p.LastFinishedEducation).HasMaxLength(110).IsRequired();
+
 
             builder.HasOne(p => p.User).WithOne(u => u.Employe);
         }

@@ -10,5 +10,6 @@ namespace Domain
         public int HealthCardId { get; set; }
         public Vaccine Vaccine{ get; set; }
         public HealthCard HealthCard { get; set; }
+        public DateTime RecivedAt { get; set; }
     }
 }

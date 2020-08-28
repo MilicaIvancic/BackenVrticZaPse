@@ -1,6 +1,5 @@
 C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\Domain.dll
 C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.csprojAssemblyReference.cache
-C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.AssemblyInfoInputs.cache
 C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.AssemblyInfo.cs
 C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\EfDataAccess.deps.json
@@ -12,3 +11,20 @@ C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\Dom
 C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.csproj.CopyComplete
 C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.dll
 C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.pdb
+C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Milica\source\repos\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\EfDataAccess.deps.json
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\EfDataAccess.runtimeconfig.json
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\EfDataAccess.runtimeconfig.dev.json
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\EfDataAccess.dll
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\EfDataAccess.pdb
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.csprojAssemblyReference.cache
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.AssemblyInfoInputs.cache
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.AssemblyInfo.cs
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.csproj.CopyComplete
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.dll
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.pdb
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\EfDataAccess\obj\Debug\netcoreapp2.2\EfDataAccess.genruntimeconfig.cache

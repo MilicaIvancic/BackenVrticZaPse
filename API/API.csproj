@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
@@ -15,6 +16,10 @@
     <ProjectReference Include="..\Aplication\Aplication.csproj" />
     <ProjectReference Include="..\EfComands\EfComands.csproj" />
     <ProjectReference Include="..\EfDataAccess\EfDataAccess.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\dogPicture\" />
   </ItemGroup>
 
 </Project>

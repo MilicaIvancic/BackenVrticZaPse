@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
 using Aplication.Comands.Roles;
 using Aplication.DTO;
 using Aplication.Exceptions;
-using Aplication.Interfaces;
 using Aplication.Searches;
-using EfComands;
-using EfDataAccess;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Protocols;
 
 namespace API.Controllers
 {
@@ -18,22 +14,26 @@ namespace API.Controllers
     [ApiController]
     public class RoleController : ControllerBase
     {
-        private readonly VrticZaPseContext context;
+ 
 
         private IAddRoleCommand addCommand;
         private IGetRolesCommand getCommand;
         private IGetRoleCommand getOneCommand;
         private IUpdateRoleCommand updateCommand;
         private IDeleteRoleCommand deleteCommand;
+        private IReturnRole returnCommand;
 
-        public RoleController(IAddRoleCommand addCommand, IGetRolesCommand getCommand, IGetRoleCommand getOneCommand, IUpdateRoleCommand updateCommand, IDeleteRoleCommand deleteCommand)
+        public RoleController(IAddRoleCommand addCommand, IGetRolesCommand getCommand, IGetRoleCommand getOneCommand, IUpdateRoleCommand updateCommand, IDeleteRoleCommand deleteCommand, IReturnRole returnCommand)
         {
             this.addCommand = addCommand;
             this.getCommand = getCommand;
             this.getOneCommand = getOneCommand;
             this.updateCommand = updateCommand;
             this.deleteCommand = deleteCommand;
+            this.returnCommand = returnCommand;
         }
+
+
 
 
         // GET: api/Role
@@ -54,7 +54,12 @@ namespace API.Controllers
             {
 
                 return NotFound();
-            }catch(Exception e)
+            }
+            catch (EntityAlreadyDeleted)
+            {
+                return NotFound();
+            }
+            catch (Exception)
             {
                 return StatusCode(500, "An error has occured.");
             }
@@ -68,9 +73,8 @@ namespace API.Controllers
             try
             {
                 addCommand.Execute(dto);
-                return StatusCode(201, "Successfully created resource.");
-                /// da li da vracam creiran objekat tj listu objekata zbog angulara 
-                /// isto pitanje i za update..
+                return Ok();
+               
 
             }
             catch (Exception e)
@@ -87,17 +91,13 @@ namespace API.Controllers
             try
             {
                 dto.Id = id;
-                updateCommand.Execute(dto, IsDeleted.Deleted);
-                return StatusCode(204, "Successfully edited.");
+                updateCommand.Execute(dto);//, IsDeleted.Deleted);
+                return Ok();
             }
             catch (EntitynotFoundException)
             {
 
                 return NotFound();
-            }
-            catch(EntityIsNotDeletedNow)
-            {
-                return Ok();
             }
             catch(EntityAlreadyExistsException)
             {
@@ -135,10 +135,76 @@ namespace API.Controllers
 
         // TODO: Async
 
-        [HttpDelete, Route("delete/forever/{id}")]
-        public IActionResult DeleteForever(int id)
+        [HttpPut, Route("return/{id}")]
+        public IActionResult Return(int id)
         {
-            return Ok(new { id });
+            try
+            {
+                returnCommand.Execute(id);
+                return NoContent();
+            }
+            catch (EntitynotFoundException)
+            {
+
+                return NotFound();
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, "An error has occured.");
+            }
         }
-    }
+
+        [HttpGet]
+        [Route("Procedura")]
+        public IActionResult GetProcedura()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Name");
+
+
+            dt.Rows.Add("Mika");
+            dt.Rows.Add("Zika");
+            dt.Rows.Add("PEra");
+            try
+            {
+                
+                    
+                  
+
+                    
+                
+
+                
+                    //string cs = @"Data Source =.\SQLEXPRESS; Initial Catalog = VrticZaPse; Integrated Security = True";
+                    //using (SqlConnection con = new SqlConnection(cs))
+                    //{
+                    //    SqlCommand cmd = new SqlCommand("Test", con);
+                    //    cmd.CommandType = CommandType.StoredProcedure;
+
+                    //    SqlParameter paramTVP = new SqlParameter()
+                    //    {
+                    //        ParameterName = "@NameType",
+                    //        Value = GetEmployeeData()
+                    //    };
+                    //    cmd.Parameters.Add(paramTVP);
+
+                    //    con.Open();
+                    //    var x=cmd.ExecuteNonQuery();
+                    //    con.Close();
+                    //}
+                
+
+               
+
+                return Ok();
+            }
+            catch (Exception e)
+            {
+
+                return StatusCode(500, "An error has occurred"
+                                       + e.Message);
+            }
+        }
+    
+}
 }

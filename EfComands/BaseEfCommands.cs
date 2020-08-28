@@ -7,7 +7,7 @@ namespace EfComands
 {
     public abstract class BaseEfCommands
     {
-        protected VrticZaPseContext Context { get; } //referenca ka data accesu>
+        protected VrticZaPseContext Context { get; } 
 
         protected BaseEfCommands(VrticZaPseContext context) => Context = context;
         

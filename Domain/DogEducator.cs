@@ -12,9 +12,8 @@ namespace Domain
         public DateTime? ExpireDate { get; set; }
         public int EducatorId { get; set; }
         public int DogId { get; set; }
-        public User User { get; set; }
+        public Employe Employe { get; set; }
         public Dog Dog { get; set; }
-        public ICollection<EducetorReport> EducetorReports { get; set; }
 
     }
 }

@@ -4,11 +4,8 @@ using System.Text;
 
 namespace Aplication.Searches
 {
-    public class RoleSearch
+    public class RoleSearch:BaseSearch
     {
-        public string Keyword { get; set; }
-
-        public bool? OnlyActive { get; set; }
         public bool? Deleted { get; set; }
 
     }

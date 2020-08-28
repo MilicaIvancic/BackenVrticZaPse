@@ -2,8 +2,16 @@ C:\Users\Milica\source\repos\VrticZaPse\Domain\bin\Debug\netcoreapp2.2\Domain.de
 C:\Users\Milica\source\repos\VrticZaPse\Domain\bin\Debug\netcoreapp2.2\Domain.dll
 C:\Users\Milica\source\repos\VrticZaPse\Domain\bin\Debug\netcoreapp2.2\Domain.pdb
 C:\Users\Milica\source\repos\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.csprojAssemblyReference.cache
-C:\Users\Milica\source\repos\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.csproj.CoreCompileInputs.cache
 C:\Users\Milica\source\repos\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfoInputs.cache
 C:\Users\Milica\source\repos\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfo.cs
 C:\Users\Milica\source\repos\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.dll
 C:\Users\Milica\source\repos\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\Domain\bin\Debug\netcoreapp2.2\Domain.deps.json
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\Domain\bin\Debug\netcoreapp2.2\Domain.dll
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\Domain\bin\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.csprojAssemblyReference.cache
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfoInputs.cache
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfo.cs
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.csproj.CoreCompileInputs.cache
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.dll
+C:\Users\Milica\Desktop\nekiProjektiBitniFax\diplomski\c#\VrticZaPse\Domain\obj\Debug\netcoreapp2.2\Domain.pdb

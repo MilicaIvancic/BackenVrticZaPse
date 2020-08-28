@@ -36,6 +36,8 @@ namespace EfDataAccess
         public DbSet<Toy> Toys { get; set; }
         public DbSet<Vaccine> Vaccines { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<EducatorReport> EducatorReports { get; set; }
+        public DbSet<DogChronichDisease> DogChronichDiseases { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(@"Data Source=.\SQLEXPRESS;Initial Catalog=VrticZaPse;Integrated Security=True");
@@ -51,7 +53,7 @@ namespace EfDataAccess
             modelBuilder.ApplyConfiguration(new DogEducatorConfiguration());
             modelBuilder.ApplyConfiguration(new DogHeatConfiguration());
             modelBuilder.ApplyConfiguration(new DogServiceConfiguration());
-            modelBuilder.ApplyConfiguration(new EducatorReportConfiguration());
+            
             modelBuilder.ApplyConfiguration(new EmployeConfiguration());
             modelBuilder.ApplyConfiguration(new EmployeCertificateConfiguration());
             modelBuilder.ApplyConfiguration(new HelthCardConfiguration());
@@ -74,6 +76,8 @@ namespace EfDataAccess
             modelBuilder.ApplyConfiguration(new ToyConfiguration());
             modelBuilder.ApplyConfiguration(new VaccineConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new DogChronichDiesaseConfiguration());
+            modelBuilder.ApplyConfiguration(new EducatorDogReporttConfiguration());
 
         }
 

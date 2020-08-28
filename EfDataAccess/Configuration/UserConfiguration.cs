@@ -18,7 +18,9 @@ namespace EfDataAccess.Configuration
             builder.Property(p => p.FirstName).HasMaxLength(20).IsRequired();
             builder.Property(p => p.Surname).HasMaxLength(20).IsRequired();
             builder.Property(p => p.Email).HasMaxLength(50).IsRequired();
+            builder.Property(p => p.Password).HasMaxLength(50).IsRequired();
             builder.HasIndex(p => p.Email).IsUnique();
+            
 
             builder.HasOne(p => p.Role).WithMany(r => r.Users);
 
@@ -30,10 +32,7 @@ namespace EfDataAccess.Configuration
 
             builder.HasOne(p => p.Employe).WithOne(r => r.User);
 
-            builder.HasMany(p => p.EducatorDogs)
-                .WithOne(pe => pe.User)
-                .HasForeignKey(pe => pe.EducatorId)
-                .OnDelete(DeleteBehavior.Restrict);
+        
 
             builder.HasMany(p => p.VeterinarianMedicalReports)
              .WithOne(pm => pm.Veterinarian)

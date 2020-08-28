@@ -16,6 +16,7 @@ namespace EfDataAccess.Configuration
 
             builder.Property(p => p.ZipCode).HasMaxLength(6).IsRequired();
             builder.HasIndex(p => p.ZipCode).IsUnique();
+            builder.Property(s => s.IsActive).HasDefaultValue(true);
 
             builder.HasMany(p => p.Addresses).WithOne(a => a.City);
         }

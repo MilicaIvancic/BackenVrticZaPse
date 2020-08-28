@@ -12,9 +12,15 @@ namespace EfDataAccess.Configuration
         public void Configure(EntityTypeBuilder<ChronicDisease> builder)
         {
             builder.Property(p => p.NameChronicDisease).HasMaxLength(50).IsRequired();
-            builder.Property(p => p.Therapy).HasMaxLength(50).IsRequired();
 
-            builder.HasOne(p => p.Dog).WithMany(u => u.ChronicDiseases);
+            builder.HasMany(p => p.ChronichDiseaseDogs)
+                .WithOne(pe => pe.ChronicDisease)
+                .HasForeignKey(pe => pe.ChronicDiseaseId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+           
+
+
         }
     }
 }
